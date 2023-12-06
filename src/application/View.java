@@ -1,24 +1,24 @@
 package application;
 
 import javafx.event.EventHandler;
-import javafx.scene.control.TextArea;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.web.HTMLEditor;
 
 public class View extends BorderPane {
-    private TextArea textArea;
+    private HTMLEditor textArea;
 
     public View() {
-        textArea = new TextArea();
+        textArea = new HTMLEditor();
         this.setCenter(textArea);
     }
 
     public String getText() {
-        return textArea.getText();
+        return textArea.getHtmlText();
     }
 
     public void setText(String text) {
-        textArea.setText(text);
+        textArea.setHtmlText(text);
     }
 
     public void setOnTextChanged(EventHandler<KeyEvent> handler) {

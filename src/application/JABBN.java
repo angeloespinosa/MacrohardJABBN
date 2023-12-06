@@ -19,11 +19,11 @@ import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
 public class JABBN extends Application {
-	
+
     private Model model;
     private View view;
     private Controller controller;
-    
+
     public static void main(String[] args) {
         launch(args);
     }
@@ -34,15 +34,6 @@ public class JABBN extends Application {
         view = new View();
         controller = new Controller(model, view);
 
-        createMenuBar(primaryStage);
-        
-        Scene scene = new Scene(view, 600, 400);
-
-        primaryStage.setTitle("Text Editor");
-        primaryStage.setScene(scene);
-        primaryStage.show();
-    }
-    private void createMenuBar(Stage primaryStage) {
         MenuBar menuBar = new MenuBar();
 
         // File Menu
@@ -75,8 +66,13 @@ public class JABBN extends Application {
 
         // Set the MenuBar in the top of the BorderPane
         view.setTop(menuBar);
-    }
 
+        Scene scene = new Scene(view, 1920, 1080);
+        primaryStage.setTitle("Macrohard JABBN");
+        primaryStage.setScene(scene);
+        primaryStage.show();
+    }
+    
     private void openFile(Stage primaryStage) {
         FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Open Text File");

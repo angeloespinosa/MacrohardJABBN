@@ -1,0 +1,99 @@
+.root {
+    -fx-font-family: 'Arial', sans-serif;
+}
+
+/* Header style */
+#header {
+    -fx-background-color: #36393f;
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+    -fx-padding: 10;
+}
+
+/* Sidebar style */
+#sidebar {
+    -fx-background-color: #2f3136;
+    -fx-text-fill: white;
+    -fx-padding: 10;
+}
+
+/* Main content area style */
+#content {
+    -fx-background-color: #2c2f33;
+    -fx-text-fill: white;
+    -fx-padding: 10;
+}
+
+/* Button style */
+.button {
+    -fx-background-color: #7289da;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 5 10;
+}
+
+.button:hover {
+    -fx-background-color: #677bc4;
+}
+
+/* Text field style */
+.text-field {
+    -fx-background-color: #40444b;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 5;
+}
+
+/* TextArea style */
+.text-area {
+    -fx-background-color: #40444b;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 5;
+}
+
+/* ScrollPane style */
+.scroll-pane {
+    -fx-background-color: #40444b;
+}
+
+/* List view style */
+.list-view {
+    -fx-background-color: #40444b;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 5;
+}
+
+/* Table view style */
+.table-view {
+    -fx-background-color: #40444b;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 5;
+}
+
+/* Table column header style */
+.table-view .column-header-background {
+    -fx-background-color: #2f3136;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+}
+
+/* Table row style */
+.table-row-cell {
+    -fx-background-color: #40444b;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+}
+
+/* Selected table row style */
+.table-row-cell:selected {
+    -fx-background-color: #7289da;
+}
+
+/* Tooltip style */
+.tooltip {
+    -fx-background-color: #7289da;
+    -fx-text-fill: white;
+}
