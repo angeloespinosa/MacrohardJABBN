@@ -36,35 +36,29 @@ public class JABBN extends Application {
 
         MenuBar menuBar = new MenuBar();
 
-        // File Menu
         Menu fileMenu = new Menu("File");
 
-        // Open MenuItem
         MenuItem openMenuItem = new MenuItem("Open");
         openMenuItem.setAccelerator(KeyCombination.keyCombination("Ctrl+O"));
         openMenuItem.setOnAction(e -> openFile(primaryStage));
         fileMenu.getItems().add(openMenuItem);
 
-        // Save MenuItem
         MenuItem saveMenuItem = new MenuItem("Save");
         saveMenuItem.setAccelerator(KeyCombination.keyCombination("Ctrl+S"));
         saveMenuItem.setOnAction(e -> saveFile(primaryStage));
         fileMenu.getItems().add(saveMenuItem);
 
-        // Print MenuItem
         MenuItem printMenuItem = new MenuItem("Print");
         printMenuItem.setAccelerator(KeyCombination.keyCombination("Ctrl+P"));
         printMenuItem.setOnAction(e -> printFile(primaryStage));
         fileMenu.getItems().add(printMenuItem);
 
-        // Merge MenuItem
         MenuItem mergeMenuItem = new MenuItem("Merge");
         mergeMenuItem.setOnAction(e -> mergeFiles(primaryStage));
         fileMenu.getItems().add(mergeMenuItem);
 
         menuBar.getMenus().add(fileMenu);
 
-        // Set the MenuBar in the top of the BorderPane
         view.setTop(menuBar);
 
         Scene scene = new Scene(view, 1920, 1080);
@@ -112,7 +106,6 @@ public class JABBN extends Application {
         if (printerJob != null) {
             boolean success = printerJob.showPrintDialog(primaryStage);
             if (success) {
-               // printerJob.printText(model.getText());
                 printerJob.endJob();
             }
         } else {
@@ -137,7 +130,7 @@ public class JABBN extends Application {
                     mergedContent.append(line1).append("\n");
                 }
 
-                mergedContent.append("\n"); // Add a separator between files
+                mergedContent.append("\n");
 
                 String line2;
                 while ((line2 = br2.readLine()) != null) {
